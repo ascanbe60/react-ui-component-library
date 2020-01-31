@@ -1,0 +1,21 @@
+.button {
+  padding: 0 1rem;
+  font-size: 16px;
+  border: none;
+  height: 40px;
+  background-color: dodgerblue;
+  color: #fff;
+
+  &--rounded {
+    border-radius: 10px;
+  }
+
+  &--round {
+    border-radius: 20px;
+  }
+
+  &--secondary {
+    background-color: lightgrey;
+    color: #333;
+  }
+}
