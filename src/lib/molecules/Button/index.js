@@ -4,14 +4,18 @@ import cn from 'classnames';
 
 import './styles.scss';
 
-const Button = ({ shape, priority }) => {
+const Button = ({
+  shape,
+  priority,
+  shadow,
+}) => {
   return (
     <button
       className={cn('button', {
-        'button--square': shape === 'square',
         'button--rounded': shape === 'rounded',
         'button--round': shape === 'round',
-        'button--primary': priority === 'primary',
+        'button--shadow--light': shadow === 'light',
+        'button--shadow--heavy': shadow === 'heavy',
         'button--secondary': priority === 'secondary',
       })}
     >
@@ -22,10 +26,14 @@ const Button = ({ shape, priority }) => {
 
 Button.defaultProps = {
   shape: 'square',
+  priority: 'primary',
+  shadow: 'none',
 };
 
 Button.propTypes = {
   shape: string,
+  priority: string,
+  shadow: string,
 };
 
 export default Button;
